@@ -1,0 +1,38 @@
+# Geotab Visibility Auditor v1.6
+
+A custom MyGeotab Add-In designed to audit and visualize group-based security and asset visibility. This tool helps administrators understand exactly which assets a user can see through the group hierarchy and which other users have visibility over them.
+
+## 🚀 Features
+
+- **Inherited Visibility**: Automatically calculates visibility through the entire Geotab group tree (Parent -> Child).
+- **Asset Deep Links**: Lists all visible assets with direct clickable links to the vehicle profile in MyGeotab.
+- **System Filtering**: Automatically filters out system service accounts (like `myadmin*`) to focus on human users.
+- **Two-Way Audit**:
+    - **Assets & Users They See**: Displays what the selected user's permissions allow them to access.
+    - **Users Who Can See Them**: Displays which other users have overlapping or higher-level group memberships.
+
+## 🛠 Installation
+
+1. Log in to your **MyGeotab** instance.
+2. Navigate to **Administration** > **System** > **System Settings**.
+3. Click on the **Add-Ins** tab.
+4. Ensure **"Allow unverified Add-Ins"** is set to **Yes**.
+5. Click **New Add-In**.
+6. Open the **Configuration** tab and paste the JSON provided in the `configuration.json` file of this repository.
+7. Click **Save**.
+8. Refresh your browser (Ctrl+Shift+R) to see the "Visibility Auditor" in your sidebar menu.
+
+## 📂 Project Structure
+
+- `configuration.json`: The complete Add-In configuration ready for copy-pasting into MyGeotab.
+- `auditor.html`: The source code for the Add-In page (HTML/JavaScript/CSS).
+
+## 🐞 Troubleshooting
+
+If the results appear unexpected:
+1. Click the orange **Copy Debug Data** button at the bottom of the Add-In page.
+2. This will copy a sample of the raw API responses to your clipboard for analysis.
+
+## 📝 About
+
+Created as part of the **Geotab Vibe Coding** movement. For more patterns and tools, visit the [Geotab Vibe Guide](https://github.com/fhoffa/geotab-vibe-guide).
